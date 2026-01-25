@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On the Virtue of Simplicity in Software - Matteo Di Mario</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.65;
+            color: #333;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        .site-title {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        .site-title a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .site-title a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            margin-bottom: 40px;
+        }
+
+        .back-link a {
+            font-size: 13px;
+            color: #666;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        .post-header {
+            margin-bottom: 40px;
+        }
+
+        .post-title {
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            color: #000;
+        }
+
+        .post-meta {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .post-meta a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .post-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .post-content {
+            font-size: 15px;
+            line-height: 1.75;
+            color: #444;
+        }
+
+        .post-content p {
+            margin-bottom: 16px;
+        }
+
+        .post-content strong {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .post-content em {
+            font-style: italic;
+        }
+
+        .post-content a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .post-content a:hover {
+            text-decoration: underline;
+        }
+
+        .post-content h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 30px 0 15px 0;
+            color: #000;
+        }
+
+        .post-content ul,
+        .post-content ol {
+            margin-bottom: 16px;
+            margin-left: 20px;
+        }
+
+        .post-content li {
+            margin-bottom: 8px;
+        }
+
+        .post-content blockquote {
+            border-left: 3px solid #ddd;
+            padding-left: 15px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #666;
+        }
+
+        .post-content code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .post-content pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .post-content pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            color: #333;
+        }
+
+        .comment-section {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .comment-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .comments-notice {
+            font-size: 14px;
+            color: #666;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
+            color: #999;
+            text-align: center;
+        }
+
+
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .post-title {
+                font-size: 24px;
+            }
+
+            .wrapper {
+                max-width: 100%;
+            }
+
+            .nested-comments {
+                margin-left: 10px;
+            }
+
+            .comment-header {
+                flex-direction: column;
+            }
+
+            .comment-time {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="site-title"><a href="/">matteo</a></div>
+        </header>
+
+        <div class="back-link">
+            <a href="/">← back to posts</a>
+        </div>
+
+        <article>
+            <div class="post-header">
+                <h1 class="post-title">On the Virtue of Simplicity in Software</h1>
+                <div class="post-meta">
+                    <a href="/">matteo</a> · January 24, 2026
+                </div>
+            </div>
+
+            <div class="post-content">
+                <p>
+                    I recently found myself rewriting a piece of code that had grown too complex. It started simple—just a few functions to process data—but over time, feature creep and premature optimization had transformed it into something almost unreadable. The experience reminded me of something I've learned many times before: <strong>simplicity is harder than complexity, but infinitely more valuable</strong>.
+                </p>
+
+                <p>
+                    There's a tendency in programming to equate complexity with sophistication. More features, more abstractions, more patterns—we treat these as signs of maturity. But the opposite is often true. The best systems I've worked with were the simplest ones. They did one thing well, they were easy to understand, and most importantly, they were easy to modify without fear of breaking something else.
+                </p>
+
+                <h3>What Makes Code Simple?</h3>
+
+                <p>
+                    Simplicity is not about having fewer features. It's about being clear, direct, and purposeful. Simple code:
+                </p>
+
+                <ul>
+                    <li>Does exactly one thing and does it well</li>
+                    <li>Is easy to read and understand without extensive documentation</li>
+                    <li>Can be modified without cascading side effects</li>
+                    <li>Requires minimal context to work with</li>
+                </ul>
+
+                <p>
+                    Consider <strong>Redis</strong>, or the <strong>Unix philosophy</strong> in general. These systems succeed not because they're feature-complete, but because they're fundamentally simple. You can understand them. You can reason about them. When something breaks, you can fix it. When requirements change, you can adapt without rewriting everything from scratch.
+                </p>
+
+                <h3>The Cost of Complexity</h3>
+
+                <p>
+                    Every line of code you write has a cost. It must be:
+                </p>
+
+                <ul>
+                    <li>Read and understood by your future self and others</li>
+                    <li>Maintained and debugged</li>
+                    <li>Tested to ensure correctness</li>
+                    <li>Modified when requirements inevitably change</li>
+                </ul>
+
+                <p>
+                    Complex code multiplies these costs. A simple 100-line function that does one thing is easier to work with than a 500-line function with multiple responsibilities, even if the 100-line version requires slightly more setup. The long-term maintainability difference is enormous.
+                </p>
+
+                <p>
+                    I've seen projects fail because they became too complex to reason about. I've seen teams stuck because they couldn't modify anything without breaking something else. I've seen new developers take weeks to understand systems that should have been understandable in days.
+                </p>
+
+                <h3>On Abstractions and Patterns</h3>
+
+                <p>
+                    This is not a call to avoid abstractions or design patterns. Rather, it's a call to be honest about when we actually need them. Most of the time, we don't. Most of the time, a straightforward implementation beats an overengineered solution. Most of the time, code that is easy to read and modify is worth more than code that demonstrates our sophisticated understanding of design patterns.
+                </p>
+
+                <p>
+                    I think the best engineers I know share this philosophy: they write code to solve problems, not to impress. They refactor mercilessly to eliminate unnecessary complexity. They question abstractions. They know that their job is not to build the most complex system possible, but to build the simplest system that actually solves the problem.
+                </p>
+
+                <h3>The Art of Simplification</h3>
+
+                <p>
+                    Achieving simplicity is hard. It requires restraint, discipline, and often, iteration. It's easier to add features than to decide which ones matter. It's easier to create another abstraction layer than to refactor existing code. It's easier to let complexity grow than to fight it at every step.
+                </p>
+
+                <p>
+                    But the effort pays off. I've found that spending time to simplify code, to remove unnecessary abstractions, to strip away non-essentials, is some of the most valuable work I do. It's like sculpting: you're not adding, you're removing until only what matters remains.
+                </p>
+
+                <blockquote>
+                    "Everything should be made as simple as possible, but not simpler." - Often attributed to Einstein
+                </blockquote>
+
+                <p>
+                    The challenge is knowing where that line is. What is the simplest design that still solves the problem? What abstractions are truly necessary? What can be removed without consequence?
+                </p>
+
+                <p>
+                    These are the questions I ask myself now, and they've made me a better programmer. Not a more advanced one, necessarily. Just a better one.
+                </p>
+            </div>
+        </article>
+
+        <footer>
+            <p>© 2026 Matteo Di Mario. <a href="/">Home</a></p>
+        </footer>
+    </div>
+</body>
+</html>
