@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXN39MKZYW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PXN39MKZYW');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Per i fan di Boris - Matteo Di Mario</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        .site-title {
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .site-title a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .site-title a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        nav {
+            margin-bottom: 40px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #666;
+        }
+
+        .post-article {
+            margin-top: 40px;
+        }
+
+        .post-title {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .post-meta {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .post-meta a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .post-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .post-content {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .post-content p {
+            margin-bottom: 15px;
+        }
+
+        .post-content h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 25px 0 10px 0;
+            line-height: 1.3;
+        }
+
+        .post-content a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .post-content a:hover {
+            text-decoration: underline;
+        }
+
+        .post-content blockquote {
+            border-left: 3px solid #eee;
+            margin: 20px 0;
+            padding-left: 20px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .post-content code {
+            background-color: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+        }
+
+        .post-content pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .post-content pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
+
+        .back-link {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .back-link a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        .comments-section {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .comments-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .comment-form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+        }
+
+        .form-group button {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .form-group button:hover {
+            background-color: #0052a3;
+        }
+
+        .form-message {
+            padding: 10px 12px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .form-message.success {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #c8e6c9;
+        }
+
+        .form-message.error {
+            background-color: #ffebee;
+            color: #c62828;
+            border: 1px solid #f8bbd0;
+        }
+
+        .comments-list {
+            margin-top: 30px;
+        }
+
+        .comment {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .comment:last-child {
+            border-bottom: none;
+        }
+
+        .comment-author {
+            font-weight: 500;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .comment-author a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .comment-author a:hover {
+            text-decoration: underline;
+        }
+
+        .comment-meta {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .comment-text {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .no-comments {
+            color: #999;
+            font-size: 14px;
+            padding: 20px 0;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
+            color: #999;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .site-title {
+                font-size: 24px;
+            }
+
+            .post-title {
+                font-size: 22px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .wrapper {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <article class="post-article">
+            <h1 class="post-title">Per i fan di Boris</h1>
+            <div class="post-meta">
+                <a href="/">Matteo Di Mario</a> · January 24, 2026
+            </div>
+
+            <div class="post-content">
+                <p>
+                    Italo Calvino scrisse in Perché leggere i classici che un suo amico parlava attraverso citazioni 
+                    di un grande classico di C. Dickens come The Pickwick Papers. Lo aveva letto così tante volte e gli 
+                    aveva insegnato così tanto che ormai parlava attraverso le sue parole.
+                    Così mi sento io con Boris, una delle poche serie TV italiane che irrompono i confini nazionali per 
+                    raccontare una storia ben più universale di quello che sembra a prima vista.
+                    Per questo voglio trattare questo post come un piccolo ricordo per la serie, con le sue citazioni, 
+                    situazioni, e personaggi, perché con Boris ho imparato che si può raccontare quasi tutto della condizione umana.
+                    Partiamo dal glossario:
+                    A cazzo di cane:
+                    Smarmella tutto: 
+                    Chiudo tutto?
+                    Dai Dai Dai:
+                    Perché a noi la qualita ci ha rotto il cazzo
+                    La linea comica:
+                    Troppo italiano:
+                    F4 Basito:
+                    Questa è l'Italia del futuro un paese di musichette, mentre fuori c'è la morte
+                    Questa è tutta SIAE
+                    Genio:
+                    Platinette:
+                    Locura:
+                    Di seguito aggiungo la mia traduzione in inglese preferita per chi si trova a dover esprimere
+                    queste situazioni nella sua lingua non madre.
+                </p>
+            <div class="back-link">
+                <a href="/">← Back to all posts</a>
+            </div>
+        </article>
+
+        <section class="comments-section">
+            <h2 class="comments-title">Comments</h2>
+
+            <div class="comment-form">
+                <div id="formMessage"></div>
+                <form id="commentForm">
+                    <div class="form-group">
+                        <label for="author">Your name *</label>
+                        <input type="text" id="author" name="author" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email (not published) *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" name="website" placeholder="https://example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Comment *</label>
+                        <textarea id="text" name="text" required placeholder="Your comment..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Post Comment</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="comments-list" id="commentsList">
+                <div class="no-comments">No comments yet. Be the first to comment!</div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const POST_ID = 'on-simplicity';
+
+        // Load comments on page load
+        document.addEventListener('DOMContentLoaded', loadComments);
+
+        // Handle form submission
+        document.getElementById('commentForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const author = document.getElementById('author').value;
+            const email = document.getElementById('email').value;
+            const website = document.getElementById('website').value;
+            const text = document.getElementById('text').value;
+            const messageDiv = document.getElementById('formMessage');
+
+            try {
+                const response = await fetch('/api/comments', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        post_id: POST_ID,
+                        author,
+                        email,
+                        website: website || null,
+                        text
+                    })
+                });
+
+                if (response.ok) {
+                    messageDiv.innerHTML = '<div class="form-message success">Comment posted successfully!</div>';
+                    document.getElementById('commentForm').reset();
+                    setTimeout(() => {
+                        messageDiv.innerHTML = '';
+                        loadComments();
+                    }, 1500);
+                } else {
+                    const error = await response.text();
+                    messageDiv.innerHTML = `<div class="form-message error">Error: ${error}</div>`;
+                }
+            } catch (error) {
+                messageDiv.innerHTML = `<div class="form-message error">Error posting comment: ${error.message}</div>`;
+            }
+        });
+
+        // Load and display comments
+        async function loadComments() {
+            try {
+                const response = await fetch(`/api/comments?post=${POST_ID}`);
+                const comments = await response.json();
+                
+                const commentsList = document.getElementById('commentsList');
+                
+                if (comments.length === 0) {
+                    commentsList.innerHTML = '<div class="no-comments">No comments yet. Be the first to comment!</div>';
+                    return;
+                }
+
+                commentsList.innerHTML = comments.map(comment => `
+                    <div class="comment">
+                        <div class="comment-author">
+                            ${comment.website ? `<a href="${escapeHtml(comment.website)}" target="_blank">${escapeHtml(comment.author)}</a>` : escapeHtml(comment.author)}
+                        </div>
+                        <div class="comment-meta">${comment.time_formatted}</div>
+                        <div class="comment-text">${escapeHtml(comment.text).replace(/\n/g, '<br>')}</div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading comments:', error);
+            }
+        }
+
+        // Auto-refresh comments every 30 seconds
+        setInterval(loadComments, 30000);
+
+        // Helper function to escape HTML
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
